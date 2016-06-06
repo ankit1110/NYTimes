@@ -11,6 +11,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements RestAPIListener {
         mAdapter = new NewsAdapter(this, new ArrayList<Result>());
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLayoutManager);
+      //  recyclerView.setLayoutManager(new GridLayoutManager(this,4));
         recyclerView.setAdapter(mAdapter);
 
         setToolbar();
